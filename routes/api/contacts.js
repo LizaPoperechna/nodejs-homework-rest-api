@@ -6,7 +6,7 @@ const {addSchema, updateFavoriteSchemas} = require('../../models/contact');
 
 router.get('/', authenticate, getAll);
 router.post('/', authenticate, validateBody(addSchema), add);
-router.get('/:id', authenticate, isValidId, isValidId, getById)
+router.get('/:id', authenticate, isValidId, getById)
 router.put('/:id', authenticate, isValidId, validateBody(addSchema), updateById);
 router.delete('/:id', authenticate, isValidId, deleteById);
 router.patch('/:id/favorite', authenticate, isValidId, validateBody(updateFavoriteSchemas), updateStatusContact)
